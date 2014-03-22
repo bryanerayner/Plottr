@@ -6,6 +6,16 @@ Router.map(function() {
   // this.resource('posts', function() {
   //   this.route('new');
   // });
+  this.resource("design" {path : "/design/:design_id"}, function()
+  {
+  	this.route("new");
+  	this.route("edit");
+  	this.resource("modes", {path: "/modes/:mode_id"}, function(){
+  		this.route("delete");
+  		this.route("new");
+  		this.route("edit");
+  	});
+  });
 });
 
 export default Router;
